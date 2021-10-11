@@ -1,0 +1,52 @@
+{
+  "@context": {   
+    "vocab": "https://localhost:44319/Vocab/",
+    "uv": "https://uv.semantic.data/context",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "jsonld": "https://www.w3.org/ns/json-ld#",
+    "hydra": "https://www.w3.org/ns/hydra/core#",
+    "Id": "@id",
+    "Type": "@type"
+  },
+  "vocab:Recipe": {
+      	"Id":"https://localhost:44319/Vocab/Recipe#",
+	      "Type":"hydra:class"    
+	    },
+	  "vocab:Recipe#Id": {
+      "Id":"https://localhost:44319/Vocab/Recipe#Id",
+      "Type":"@id",
+       "rdfs:domain" :"Recipe"   
+    },
+  "vocab:Ingredient": {
+      	"Id":"https://localhost:44319/Vocab/Ingredient#",
+	      "Type":"hydra:class"    
+	    },
+	  "vocab:Ingredient#Id": {
+      "Id":"https://localhost:44319/Vocab/Ingredient#Id",
+      "Type":"@id",
+       "rdfs:domain" :"Ingredient"   
+    },
+
+  "vocab:Recipe#Name": {
+
+      "Id":"https://localhost:44319/Vocab/Recipe#Name",
+
+      "Type":"rdf:property",
+
+       "rdfs:domain" :"Recipe",
+
+       "rdfs:range":"xsd:string"
+
+    },
+  "vocab:Recipe#Ingredients": {
+
+      "Id":"https://localhost:44319/Vocab/Recipe#Ingredients",
+
+      "Type":"rdf:property",
+
+       "rdfs:domain" :"Recipe",
+
+       "rdfs:range":"https://localhost:44319/Vocab/Ingredient#"
+
+    }
+}
