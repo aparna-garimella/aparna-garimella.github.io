@@ -1,0 +1,33 @@
+{
+  "@context": {    
+    "api": "https://aparna-garimella.github.io/vocab/",
+    "Recipe": {
+      "@context": {
+        "Id": {
+          "@id": "api:Recipe#Id",
+          "@type": "@id"
+        },
+        "Name": {
+          "@id": "api:Recipe#Name",
+          "@type": "xsd:string"
+        },
+        "Description": {
+          "@id": "api:Recipe#Description",
+          "@type": "xsd:string"
+        },
+        "Yield": {
+          "@id": "api:Recipe#Yield",
+          "@type": "xsd:string"
+        },
+        "RecipeDate": {
+          "@id": "api:Recipe#RecipeDate",
+          "@type": "xsd:dateTime"
+        },
+        "NumberOfServings": {
+          "@id": "api:Recipe#NumberOfServings",
+          "@type": "xsd:integer"
+        }
+      }
+    }
+  }
+}
