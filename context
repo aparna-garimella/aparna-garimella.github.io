@@ -45,6 +45,17 @@
 
        "rdfs:range":"xsd:string"
 
+    },
+    "Recipe#RecipeDate": {
+
+      "Id":"https://aparna-garimella.github.io/Vocab/Recipe#RecipeDate",
+
+      "Type":"rdf:property",
+
+       "rdfs:domain" :"Recipe",
+
+       "rdfs:range":"xsd:datetime"
+
     }
 }
 
