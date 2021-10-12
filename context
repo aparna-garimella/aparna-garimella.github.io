@@ -26,7 +26,7 @@
             "range": "xsd:string"
         },
         {
-            "Id": "api:Recipe#RecipeDate",
+            "Id": "api:RecipeDate",
             "Type": "rdf:property",
             "domain": "Recipe",
             "range": "xsd:datetime"
