@@ -2,10 +2,7 @@
 
   "@context": {
 
-    "@base": "https://aparna-garimella.github.io/",
-    "@vocab": "https://aparna-garimella.github.io/Vocab/",
-    "uv": "https://uv.semantic.data/context.jsonld",
-
+  
     "xsd": "http://www.w3.org/2001/XMLSchema#",
 
     "hydra": "https://www.w3.org/ns/hydra/core#",
