@@ -1,6 +1,6 @@
 {
     "@context": {
-        "api": "https://aparna-garimella.github.io/context/",
+        "api": "https://aparna-garimella.github.io/vocab/",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "hydra": "https://www.w3.org/ns/hydra/core#",
         "Id": "@id",
