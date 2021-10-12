@@ -6,7 +6,8 @@
         "Id": "@id",
         "Type": "@type",
         "domain": "rdfs:domain",
-        "range": "rdfs:range"
+        "range": "rdfs:range",
+        "defines": { "@reverse": "rdfs:isDefinedBy" }
     },
     "Type": "owl:ontology",
     "defines": [
