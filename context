@@ -1,0 +1,90 @@
+{
+  "@context": {
+    "@base": "https://aparna-garimella.github.io/",
+    "@vocab": "https://aparna-garimella.github.io/Vocab/",
+    "uv": "https://uv.semantic.data/context",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "jsonld": "https://www.w3.org/ns/json-ld#",
+    "hydra": "https://www.w3.org/ns/hydra/core#",
+    "Id": "@id",
+    "Type": "@type",
+    "Recipe": {
+      "@context": {
+        "@base": "https://aparna-garimella.github.io/Recipe/",
+        "@vocab": "https://aparna-garimella.github.io/Vocab/Recipe#",
+        "Id": {
+          "@id": "Id",
+          "@type": "@id"
+        },
+        "Name": {
+          "@id": "Name",
+          "@type": "xsd:string"
+        },
+        "Description": {
+          "@id": "Description",
+          "@type": "xsd:string"
+        },
+        "Yield": {
+          "@id": "Yield",
+          "@type": "xsd:string"
+        },
+        "RecipeDate": {
+          "@id": "RecipeDate",
+          "@type": "xsd:dateTime"
+        },
+        "NumberOfServings": {
+          "@id": "NumberOfServings",
+          "@type": "xsd:integer"
+        },
+        "Steps": {
+          "@id": "Steps",
+          "@type": "Steps",
+          "@context": {
+            "@vocab": "https://aparna-garimella.github.io/Vocab/Recipe/Step#",
+            "Number": {
+              "@id": "Number",
+              "@type": "xsd:integer"
+            },
+            "Description": {
+              "@id": "Description",
+              "@type": "xsd:string"
+            }
+          }
+        },
+        "NutritionInfo": {
+          "@id": "NutritionInfo",
+          "@type": "NutritionInfo",
+          "@context": {
+            "@vocab": "https://aparna-garimella.github.io/Vocab/Recipe/Nutrition#",
+            "Calories": {
+              "@id": "Calories",
+              "@type": "xsd:decimal"
+            },
+            "AddedSugar": {
+              "@id": "AddedSugar",
+              "@type": "xsd:decimal"
+            }
+          }
+        }
+      }
+    },
+    "Ingredient": {
+      "@context": {
+        "@base": "https://aparna-garimella.github.io/Ingredient/",
+        "@vocab": "https://aparna-garimella.github.io/Vocab/Ingredient#",
+        "Id": {
+          "@id": "Id",
+          "@type": "@id"
+        },
+        "Name": {
+          "@id": "Name",
+          "@type": "xsd:string"
+        },
+        "Image": {
+          "@id": "Image",
+          "@type": "@id"
+        }
+      }
+    }
+  }
+}
