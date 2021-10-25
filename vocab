@@ -1,36 +1,105 @@
 {
-    "@context": {
-        "api": "https://aparna-garimella.github.io/vocab/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "hydra": "https://www.w3.org/ns/hydra/core#",
-        "Id": "@id",
-        "Type": "@type",
-        "domain": "rdfs:domain",
-        "range": "rdfs:range",
-        "defines": { "@reverse": "rdfs:isDefinedBy" }
+  "@context": {
+    "api": "http://localhost:13973/vocab/",
+    "uv": "https://uv.semantic.data/context",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "jsonld": "https://www.w3.org/ns/json-ld#",
+    "hydra": "https://www.w3.org/ns/hydra/core#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "defines": {
+      "@reverse": "rdfs:isDefinedBy"
+    }
+  },
+  "@id": "http://localhost:13973/vocab",
+  "@type": "owl:ontology",
+  "defines": [
+    {
+      "@id": "api:Recipe",
+      "@type": "owl:Class"
     },
-    "Type": "owl:ontology",
-    "defines": [
-        {
-            "Id": "api:Recipe",
-            "Type": "hydra:class"
-        },
-        {
-            "Id": "api:Recipe#Id",
-            "Type": "@id",
-            "domain": "Recipe"
-        },
-        {
-            "Id": "api:Recipe#Name",
-            "Type": "rdf:property",
-            "domain": "Recipe",
-            "range": "xsd:string"
-        },
-        {
-            "Id": "api:RecipeDate",
-            "Type": "rdf:property",
-            "domain": "Recipe",
-            "range": "xsd:datetime"
-        }
-    ]
+    {
+      "@id": "api:Ingredient",
+      "@type": "owl:Class"
+    },
+    {
+      "@id": "api:Recipe/Step",
+      "@type": "owl:Class",
+      "rdfs:subClassOf": "api:Recipe"
+    },
+    {
+      "@id": "api:Recipe/Nutrition",
+      "@type": "owl:Class",
+      "rdfs:subClassOf": "api:Recipe"
+    },
+    {
+      "@id": "api:Recipe#Id",
+      "@type": "rdf:property",
+      "rdfs:domain": "api:Recipe"
+    },
+    {
+      "@id": "api:Recipe#Name",
+      "@type": "rdf:property",
+      "rdfs:domain": "api:Recipe",
+      "rdfs:range": "xsd:string"
+    },
+    {
+      "@id": "api:Recipe#Description",
+      "@type": "rdf:property",
+      "rdfs:domain": "api:Recipe",
+      "rdfs:range": "xsd:string"
+    },
+    {
+      "@id": "api:Recipe#Yield",
+      "@type": "rdf:property",
+      "rdfs:domain": "api:Recipe",
+      "rdfs:range": "xsd:string"
+    },
+    {
+      "@id": "api:Recipe#RecipeDate",
+      "@type": "rdf:property",
+      "rdfs:domain": "api:Recipe",
+      "rdfs:range": "xsd:dateTime"
+    },
+    {
+      "@id": "api:Recipe#NumberOfServings",
+      "@type": "rdf:property",
+      "rdfs:domain": "api:Recipe",
+      "rdfs:range": "xsd:integer"
+    },
+    {
+      "@id": "api:Recipe#HasSteps",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": "api:Recipe",
+      "rdfs:range": "api:Recipe/Step"
+    },
+    {
+      "@id": "api:Recipe#HasIngredients",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": "api:Recipe",
+      "rdfs:range": "api:Ingredient"
+    },
+    {
+      "@id": "api:Recipe#HasNutrition",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": "api:Recipe",
+      "rdfs:range": "api:Recipe/Nutrition"
+    },
+    {
+      "@id": "api:Ingredient#Id",
+      "@type": "rdf:property",
+      "rdfs:domain": "api:Ingredient"
+    },
+    {
+      "@id": "api:Ingredient#Name",
+      "@type": "rdf:property",
+      "rdfs:domain": "api:Ingredient",
+      "rdfs:range": "xsd:string"
+    },
+    {
+      "@id": "api:Ingredient#Image",
+      "@type": "rdf:property",
+      "rdfs:domain": "api:Ingredient"
+    }
+  ]
 }
