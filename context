@@ -1,6 +1,6 @@
 {
-  "@context": {    
-    "api": "https://aparna-garimella.github.io/vocab/",
+  "@context": [{    
+    "api": "https://aparna-garimella.github.io/vocab/"},{
     "Recipe": {
       "@context": {
         "Id": {
@@ -29,5 +29,5 @@
         }
       }
     }
-  }
+  }]
 }
